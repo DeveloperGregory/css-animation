@@ -4,7 +4,123 @@
     width: 50px;
     animation-name: box1;
     animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
+#box2{
+    background-color: green;
+    height: 50px;
+    width: 50px;
+    animation-name: box2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+#head{
+    background-color: orange;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    left: 100px;
+    position:relative;
+}
+#back{
+    height: 100px;
+    width:20px;
+    background-color: orange;
+    left: 120px;
+    position:relative;
+    
+}
+#left-arm{
+    height: 20px;
+    width: 100px;
+    background-color: orange;
+    left: 20px;
+    position:relative;
+    top: -100px;
+
+}
+#right-arm{
+    height: 20px;
+    width: 100px;
+    background-color: orange;
+    left: 130px;
+    position:relative;
+    top: -120px;
+    animation-name: right-arm;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: 0% 0%;
+}
+#left-leg{
+    height: 20px;
+    width: 100px;
+    background-color: orange;
+    left: 42px;
+    position:relative;
+    transform: rotate(-45deg);
+    top: -20px;
+}
+#right-leg{
+    height: 20px;
+    width: 100px;
+    background-color: orange;
+    left: 115px;
+    position:relative;
+    transform: rotate(45deg);
+    top: -40px;
+}
+#nose{
+    background-color: red;
+    height: 40px;
+    width: 40px;
+    transform: rotate(45deg);
+}
+#fuselage{
+    background-color: silver;
+    height: 120px;
+    width: 55px;
+    position: relative;
+    top: -20px;
+    left: -6px;
+    z-index: 2;
+}
+#window{
+    position: relative;
+    background-color: royalblue;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    left: 10px;;
+    top: -120px;
+    z-index: 3;
+}
+#rocket-ship{
+    position: relative;
+    left: 600px;
+    top: 300px;
+    animation-name: ship;
+    animation-duration: 3s;
+    
+}
+#l-fin{
+    position: relative;
+    height: 60px;
+    width: 50px;
+    background-color: red;
+    transform: skewX(-35deg);
+    top: -95px;
+    left: -26px;
+}
+#r-fin{
+    position: relative;
+    height: 60px;
+    width: 50px;
+    background-color: red;
+    transform: skewX(35deg);
+    top: -155px;
+    left: 20px;
+}
+
 
 @keyframes box1{
     0%{
@@ -13,6 +129,42 @@
     }
     100%{
         transform: rotate(180deg);
+    }
+}
+
+@keyframes box2{
+    0%{
+        transform: translateX(50px);
+        background-color: greenyellow;
+    }
+    50%{
+        transform: translateX(800px);
+        background-color: green;
+    }
+    100%{
+        transform: translateX(50px);
+        background-color: greenyellow;
+    }
+}
+@keyframes right-arm{
+    0%{
+        transform: rotate(-45deg);
+    }
+    50%{
+        transform: rotate(-10deg);    
+    }
+    100%{
+        transform: rotate(-45deg);    
+    }
+}
+@keyframes ship{
+    0%{
+        transform: translateY(100px);
+        
+    }
+    100%{
+        transform: translateY(-500px);
+        
     }
 }
 
